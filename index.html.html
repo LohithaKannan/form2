@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:lightblue">
+<center>
+<p><h1>FORM VALIDATION</h1></p>
+<form name="f1">
+<table>
+<tr><td>NAME:</td><td><input type="text" name="a1" placeholder="first name"></td></tr>
+<tr><td>EMAIL:</td><td><input type="email" name="a2" placeholder="mail only"></td></tr>
+<tr><td>PHONE NUMBER:</td><td><input type="text" name="a3" placeholder="number only"></td></tr>
+<tr><td><input type="button" value="REGISTER" onclick="press()"></td></tr>
+</table>
+</form>
+<script type="text/javascript">
+function press()
+{
+var str1=f1.a1.value;
+var str2=f1.a2.value;
+var str3=f1.a3.value;
+if(str1.length==0)
+{
+window.alert("NAME IS MISSING");
+return;
+}
+if(str2.length==0)
+{
+window.alert("EMAIL IS MISSING");
+return;
+}
+if(str3.length==0)
+{
+window.alert("PHONE NUMBER IN MISSING");
+return;
+}
+for(var i=0;i<str1.length;i++)
+{
+if(str1.charCodeAt(i)>=65 && str1.charCodeAt(i)<=90)
+{
+continue;
+}
+else
+{
+window.alert("TYPE NAME IN CAPITAL LETTERS");
+}
+}
+}
+</script>
+</center>
+</body>
+</html>
